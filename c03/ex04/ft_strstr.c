@@ -6,7 +6,7 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:12:08 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/12 13:39:25 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/13 04:05:12 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	j = 0;
-	if (!(to_find[0]))
-	{
+	if (to_find[j] = '\0')
 		return(str);
-	}
-		
+
+	while (str[i] != '\0')
 
 }
