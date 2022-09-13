@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 12:10:02 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/12 06:43:50 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/12 04:44:28 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/12 22:27:49 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (s1[i] != '\0' || s2[i] != '\0' && i < n)
 	{
-		dest[i] = src[i];
-		i++;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+	i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (0);
 }

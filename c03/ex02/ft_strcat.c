@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 12:10:02 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/12 06:43:50 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/12 07:43:17 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/12 10:38:37 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	a;
 
 	i = 0;
+	a = 0;
+	while (dest[a] != '\0')
+	{
+		a++;
+	}
 	while (src[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[a] = src[i];
 		i++;
+		a++;
 	}
-	dest[i] = '\0';
+	dest[a] = '\0';
 	return (dest);
 }
