@@ -6,25 +6,36 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 12:12:08 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/15 07:39:24 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/15 09:59:24 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	len;
-	unsigned int	i;
+// #include <stdio.h>
 
-	len = 0;
+char	*ft_strstr(char *str, char *to_find)
+{
+	int	i;
+	int	j;
+
 	i = 0;
-	while (dest[len] != '\0')
-		len++;
-	while (src[i] != '\0' && i < nb)
+	j = 0;
+	if (to_find[j] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		dest[len] = src[i];
-		len++;
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i);
 		i++;
+		j = 0;
 	}
-	dest[len] = '\0';
-	return (dest);
+	return (0);
 }
+
+// int	main()
+// {
+// 	char str[] = "Hallo Testtest";
+// 	char find[] = "Test";
+// 	printf("%s", ft_strstr(str, find));
+// }

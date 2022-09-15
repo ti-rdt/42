@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 04:44:28 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/15 19:35:27 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/16 00:19:26 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/16 00:25:58 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	main(int argc, char **argv)
 {
-	unsigned int	i;
+	int	n;
+	int	i;
 
+	n = argc - 1;
 	i = 0;
-	while (s1[i] != '\0' || (s2[i] != '\0' && i < n - 1))
+	while (n > 0)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
+		while (argv[n][i])
+		{
+			write (1, &argv[n][i], 1);
+			i++;
+		}
+		write (1, "\n", 1);
+		n--;
+		i = 0;
 	}
 	return (0);
-}
-
-int	main()
-{
-	printf("%d", ft_strncmp("Hello", "HelloWorld", -3));
 }
