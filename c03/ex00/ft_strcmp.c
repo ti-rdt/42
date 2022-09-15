@@ -6,9 +6,12 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 02:09:40 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/13 02:31:48 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/15 04:41:35 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
+//#include <string.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -23,3 +26,8 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+//int	main()
+//{
+//	printf("%d", ft_strcmp("Hello", "Hello1"));
+//}

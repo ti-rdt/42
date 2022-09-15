@@ -1,58 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 07:01:00 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/15 07:06:02 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/15 06:59:22 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/15 07:03:48 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_display_comb(int a, int b, int last)
-{
-	ft_putchar(48 + a / 10);
-	ft_putchar(48 + a % 10);
-	ft_putchar(' ');
-	ft_putchar(48 + b / 10);
-	ft_putchar(48 + b % 10);
-	if (last)
-	{
-		write(1, ", ", 2);
-	}
-}
-
-void	ft_print_comb2(void)
+void	ft_print_comb(void)
 {
 	int	a;
 	int	b;
-	int	last;
+	int	c;
 
-	a = 0;
-	while (a <= 99)
+	a = '0';
+	while (a <= '7')
 	{
 		b = a + 1;
-		while (b <= 99)
+		while (b <= '8')
 		{
-			if (a == 98 && b == 99)
+			c = b + 1;
+			while (c <= '9')
 			{
-				last = 0;
+				write (1, &a, 1);
+				write (1, &b, 1);
+				write (1, &c, 1);
+				if (a != '7')
+					write (1, ", ", 2);
+				c++;
 			}
-			else
-			{
-				last = 1;
-			}
-			ft_display_comb(a, b, last);
 			b++;
 		}
-	a++;
+		a++;
 	}
-}
+}	

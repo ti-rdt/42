@@ -6,9 +6,11 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:39:13 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/12 12:11:42 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/15 07:43:52 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// #include <stdio.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -30,3 +32,10 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[a] = '\0';
 	return (dest);
 }
+
+// int	main()
+// {
+// 	char src[] = "Hehe";
+// 	char dest[] = "Ca Marche ";
+// 	printf("%s", ft_strcat(dest, src, 10));
+// }

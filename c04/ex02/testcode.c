@@ -1,48 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   testcode.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 14:20:41 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/06 18:37:33 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/13 08:59:37 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/15 06:23:10 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(char a, char b, char c)
+void	ft_putchar(char c)
 {
-	write (1, &a, 1);
-	write (1, &b, 1);
-	write (1, &c, 1);
-	if (a != '7')
+	write(1, &c, 1);
+}
+
+void	ft_putint(int nb)
+{
+	if (nb >= 0 && nb <= 9)
+	{	
+		ft_putchar (nb + '0');
+	}
+	else if (nb < 0)
 	{
-		write (1, ", ", 2);
+		ft_putchar('-');
+		ft_putint(nb * (-1));
+	}
+	else
+	{
+		ft_putint(nb / 10);
+		ft_putint(nb % 10);
 	}
 }
 
-void	ft_print_comb(void)
+void	ft_putnbr(int nb)
 {
-	char	a;
-	char	b;
-	char	c;
-
-	a = '0';
-	while (a <= '7')
+	if (nb == -2147483648)
 	{
-		b = a + 1;
-		while (b <= '8')
-		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				ft_print_numbers(a, b, c);
-				c++;
-			}
-			b++;
-		}
-		a++;
+		write(1, "-2147483648", 11);
 	}
+	else
+		ft_putint(nb);
+}
+
+int	main(void)
+{
+	ft_putnbr(-2147483648);
 }

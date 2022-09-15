@@ -6,11 +6,11 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 04:44:28 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/13 07:56:18 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/15 07:40:53 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -26,7 +26,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (0);
 }
 
-int	main()
-{
-	printf("%d", ft_strncmp("Hello", "HelloWorld", 9));
-}
+// int	main()
+// {
+// 	printf("%d", ft_strncmp("Hello", "HelloWorld", 9));
+// }

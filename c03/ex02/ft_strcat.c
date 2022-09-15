@@ -6,7 +6,7 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 07:43:17 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/12 10:38:37 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/15 07:44:16 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,10 @@ char	*ft_strcat(char *dest, char *src)
 	dest[a] = '\0';
 	return (dest);
 }
+
+// int	main()
+// {
+// 	char src[] = " Hehe";
+// 	char dest[] = "Ca marche";
+// 	printf("%s", ft_strcat(dest, src));
+// }
