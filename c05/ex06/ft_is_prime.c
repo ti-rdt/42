@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 02:50:01 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/19 04:17:03 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/19 07:55:57 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/19 08:33:44 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+// #include <stdio.h>
+
+int	ft_is_prime(int nb)
 {
-	if (index < 0)
-		return (-1);
-	if (index < 2)
-		return (1);
-	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
+	int	i;
+
+	i = 2;
+	if (nb <= 1)
+		return (0);
+	while (i <= nb / i)
+	{
+		if (nb % i == 0)
+			return (0);
+	i++;
+	}
+	return (1);
 }
-	
+
+// int main()
+// {
+// 	printf("%d", ft_is_prime(0));
+// }
