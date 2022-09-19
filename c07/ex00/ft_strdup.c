@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 00:54:17 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/19 11:38:24 by troudot          ###   ########.fr       */
+/*   Created: 2022/09/19 08:36:55 by troudot           #+#    #+#             */
+/*   Updated: 2022/09/19 08:37:36 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	result;
+#include <stdlib.h>
 
-	result = nb;
-	if (power < 0)
-		return (0);
-	if (nb && power == 0)
-		return (1);
-	while (--power > 0)
-		result *= nb;
-	return (result);
-}
+char	*ft_strdup(char *src)
+{}
