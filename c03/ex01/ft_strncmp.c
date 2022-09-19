@@ -6,18 +6,18 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 04:44:28 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/15 19:35:27 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/16 01:00:53 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (s1[i] != '\0' || (s2[i] != '\0' && i < n - 1))
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
 		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
@@ -26,7 +26,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (0);
 }
 
-int	main()
-{
-	printf("%d", ft_strncmp("Hello", "HelloWorld", -3));
-}
+// int	main()
+// {
+// 	printf("%d", ft_strncmp("Hello", "HelloWorld", -3));
+// }

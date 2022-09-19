@@ -6,7 +6,7 @@
 /*   By: troudot <troudot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:39:13 by troudot           #+#    #+#             */
-/*   Updated: 2022/09/15 09:58:01 by troudot          ###   ########.fr       */
+/*   Updated: 2022/09/16 01:05:26 by troudot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int				i;
+	unsigned int	i;
 	unsigned int	a;
 
 	i = 0;
